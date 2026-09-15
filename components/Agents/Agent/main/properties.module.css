@@ -1,0 +1,214 @@
+/* Section header */
+.section-head {
+  margin-top: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.section-title {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+.section-title i {
+  color: var(--primary);
+  font-size: 22px;
+}
+.section-title h2 {
+  margin: 0;
+  font-family: var(--display);
+  font-size: 20px;
+  font-weight: 800;
+  color: var(--secondary);
+}
+.section-count {
+  background: var(--primary-100);
+  color: var(--primary);
+  font-weight: 700;
+  font-size: 12px;
+  padding: 3px 10px;
+  border-radius: 999px;
+}
+
+/* Toolbar */
+.toolbar {
+  margin: 18px 0 14px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.results {
+  font-size: 14px;
+  color: var(--secondary);
+}
+.results strong {
+  color: var(--primary);
+}
+.sort {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 8px 12px;
+  font-size: 13px;
+  color: var(--secondary);
+}
+.sort select {
+  border: none;
+  outline: none;
+  background: transparent;
+  font-weight: 600;
+  color: var(--primary);
+}
+
+/* Property grid */
+.props {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+}
+.prop {
+  background: var(--surface);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border);
+  overflow: hidden;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+  cursor: pointer;
+}
+.prop:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
+}
+.prop .thumb {
+  position: relative;
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+  background: #e9eef5;
+}
+.prop .thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+.prop:hover .thumb img {
+  transform: scale(1.05);
+}
+.prop .tag {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  background: var(--primary);
+  color: #fff;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 6px 10px;
+  border-radius: 6px;
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
+}
+.prop .tag.rent {
+  background: var(--accent);
+  color: #1a1a1a;
+}
+.prop .fav {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.95);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary);
+  font-size: 14px;
+}
+.prop .price-overlay {
+  position: absolute;
+  bottom: 12px;
+  left: 12px;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(6px);
+  color: #fff;
+  font-weight: 700;
+  font-size: 16px;
+  padding: 6px 12px;
+  border-radius: 8px;
+}
+.prop .info {
+  padding: 16px 18px 18px;
+}
+.prop .title {
+  font-weight: 700;
+  font-size: 16px;
+  color: var(--secondary);
+  margin: 0 0 4px;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.prop .loc {
+  font-size: 13px;
+  color: var(--muted);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 12px;
+}
+.prop .specs {
+  display: flex;
+  gap: 12px;
+  padding-top: 12px;
+  border-top: 1px dashed var(--border);
+  font-size: 13px;
+  color: var(--secondary);
+}
+.prop .specs .spec {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+.prop .specs i {
+  color: var(--primary);
+}
+
+/* Load more */
+.load-more {
+  margin: 22px auto 0;
+  display: flex;
+  justify-content: center;
+}
+.btn-load {
+  background: #fff;
+  color: var(--primary);
+  border: 2px solid var(--primary);
+  padding: 11px 28px;
+  border-radius: 999px;
+  font-weight: 700;
+  font-size: 14px;
+  transition: all 0.15s ease;
+}
+.btn-load:hover {
+  background: var(--primary);
+  color: #fff;
+}
+@media (max-width: 720px) {
+  .props {
+    grid-template-columns: 1fr;
+  }
+  .section-head {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
