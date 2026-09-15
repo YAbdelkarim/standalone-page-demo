@@ -9,7 +9,7 @@ all data is static demo data.
 ## Live demo
 
 > Deployed on Vercel — add your URL here after the first deploy, e.g.:
-> https://standalone-agent-details.vercel.app
+> https://standalone-page-demo.vercel.app/agent-details/sarah-al-mansouri/
 
 ## What's in the page
 
